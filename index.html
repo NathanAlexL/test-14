@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil - Educours</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Ajout de Google Fonts pour Playfair Display et Roboto -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Educours</h1>
+            <p class="slogan">Pour une éducation collective</p> <!-- Ajout du slogan -->
+            <nav>
+                <ul>
+                    <li><a href="#login">Se connecter</a></li>
+                    <li><a href="#signup">Créer un compte</a></li>
+                    <li><a href="#features">Fonctionnalités</a></li> <!-- Nouvelle section Fonctionnalités -->
+                    <li><a href="#contact">Contactez-nous</a></li> <!-- Modification du lien "contact" -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="login">
+            <div class="container">
+                <h2>Connexion</h2>
+                <form action="login.php" method="POST" onsubmit="return checkLogin()">
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" required>
+                    <p id="login-error" class="error"></p> <!-- Affichage du message d'erreur -->
+                    <button type="submit">Se connecter</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="signup">
+            <div class="container">
+                <h2>Créer un compte</h2>
+                <form action="signup.php" method="POST" onsubmit="return checkSignup()">
+                    <label for="new-username">Nom d'utilisateur :</label>
+                    <input type="text" id="new-username" name="new-username" required>
+                    <p id="signup-error" class="error"></p> <!-- Affichage du message d'erreur -->
+                    <label for="new-password">Mot de passe :</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                    <button type="submit">Créer un compte</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2>Fonctionnalités</h2>
+                <p>Chez Educours, notre objectif est de mettre en relation les élèves et les professeurs.</p>
+                <ul>
+                    <li>Publiez vos cours, vos vidéos éducatives ou encore vos quiz sur une plateforme unique afin de les rendre accessibles à tous.</li>
+                    <li>Bénéficiez d'un enseignement de qualité afin de mettre fin à vos difficultés.</li>
+                </ul>
+                <p>Contactez-nous !</p> <!-- Texte ajouté -->
+                <p>Adresse mail : educours.enseignement@gmail.com</p> <!-- Texte ajouté -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="quote">« L'éducation est l'arme la plus puissante que l'on puisse utiliser pour changer le monde » - Nelson Mandela</p> <!-- Ajout de la citation -->
+        </div>
+    </footer>
+
+    <script src="validation.js"></script> <!-- JavaScript pour la validation des formulaires -->
+    <script src="redirection.js"></script> <!-- JavaScript pour la redirection vers une page blanche -->
+</body>
+</html>
